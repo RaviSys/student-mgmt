@@ -4,7 +4,7 @@ class ChangeTypeOfDescriptionInDemos < ActiveRecord::Migration[6.1]
       dir.up do 
         change_column :demos, :description, :text
       end
-      dir.up do 
+      dir.down do 
         change_column :demos, :description, :string
       end
     end

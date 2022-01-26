@@ -21,3 +21,15 @@ student = Student.create(
     email: "student#{i+1}@bootcamp.com"
   )
 end
+
+Student.all.each do |student|
+  student.blogs.create(title: "Dummy Blog for Student #{student.id}", content: "Custom content pending")
+  student.blogs.create(title: "Dummy Blog for Student #{student.id}", content: "Custom content pending")
+end
+
+Course.create(name: 'Ruby on Rails bootcamp', description: 'Pending')
+Course.create(name: 'ReactJs bootcamp', description: 'Pending')
+Course.create(name: 'Angular Js bootcamp', description: 'Pending')
+Course.create(name: 'NodeJs bootcamp', description: 'Pending')
+Course.create(name: 'Java Bootcamp', description: 'Pending')
+Course.create(name: 'Python Bootcamp', description: 'Pending')
