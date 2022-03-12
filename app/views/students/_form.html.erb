@@ -6,47 +6,47 @@
     <% end %>
   <% end %>
 
-  <div>
-    <%= form.label :first_name %><br>
-    <%= form.text_field :first_name %>
+  <div class="form-group">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control form-control-lg" %>
   </div>
 
   <div>
-    <%= form.label :last_name %><br>
-    <%= form.text_field :last_name %>
+    <%= form.label :date_of_birth %>
+    <%= form.date_field :date_of_birth, class: "form-control form-control-lg" %>
   </div>
 
-  <div>
-    <%= form.label :email %><br>
-    <%= form.email_field :email %>
+  <div class="form-group">
+    <%= form.label :permanent_address %>
+    <%= form.text_field :permanent_address, class: "form-control form-control-lg" %>
   </div>
 
-  <div>
-    <%= form.label :date_of_birth %><br>
-    <%= form.date_field :date_of_birth %>
+  <div class="form-group">
+    <%= form.label :local_address %>
+    <%= form.text_field :local_address, class: "form-control form-control-lg" %>
   </div>
 
-  <div>
-    <%= form.label :permanent_address %><br>
-    <%= form.text_field :permanent_address %>
+  <div class="form-group">
+    <%= form.label :permanent_contact_number %>
+    <%= form.text_field :permanent_contact_number, class: "form-control form-control-lg" %>
   </div>
 
-  <div>
-    <%= form.label :local_address %><br>
-    <%= form.text_field :local_address %>
+  <div class="form-group">
+    <%= form.label :alternate_contact_number %>
+    <%= form.text_field :alternate_contact_number, class: "form-control form-control-lg" %>
   </div>
 
-  <div>
-    <%= form.label :permanent_contact_number %><br>
-    <%= form.text_field :permanent_contact_number %>
-  </div>
-
-  <div>
-    <%= form.label :alternate_contact_number %><br>
-    <%= form.text_field :alternate_contact_number %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary btn-lg" %>
   </div>
 <% end %>

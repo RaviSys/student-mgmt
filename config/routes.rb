@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :students
+  resources :blogs
+
+  namespace :admin do 
+    get 'dashboard' => 'dashboard#index'
+  end
 end

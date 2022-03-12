@@ -31,4 +31,18 @@ class Student < ApplicationRecord
     end
   end
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def age
+    return nil unless date_of_birth.present?
+    
+    return Date.today.year - date_of_birth.year
+  end
+
+  def name_with_email
+    "#{full_name} / #{email}"
+  end
+
 end

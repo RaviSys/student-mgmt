@@ -1,5 +1,8 @@
 class StudentsController < ApplicationController
+  layout 'admin'
+  include ApplicationHelper
   before_action :set_student, only: %i[show edit update destroy]
+  helper_method :formatted_date
 
   def index
     @students = Student.all
@@ -22,6 +25,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    date = formatted_date(@student.date_of_birth)
   end
 
   def update
@@ -45,6 +49,10 @@ class StudentsController < ApplicationController
 
   def set_student
     @student = Student.find(params[:id])
+  end
+
+  def formatted_date(date)
+    date.strftime('%A, %b %d, %Y')
   end
 
 end

@@ -11,3 +11,10 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import "css/application";
+
+import $ from 'jquery';
+global.$ = jQuery;
+
+import "bootstrap";

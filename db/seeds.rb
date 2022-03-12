@@ -10,15 +10,17 @@
 student = Student.create(
   first_name: 'Ravi',
   last_name: 'Singh',
-  email: 'ravi@bootcamp.com'
+  email: 'ravi@bootcamp.com',
+  date_of_birth: Date.today - 20.years
 )
 
 20.times do |i|
   puts "Creating student #{i+1}"
   Student.create(
-    first_name: "Student #{i+1}",
-    last_name: "Lname #{i+1}",
-    email: "student#{i+1}@bootcamp.com"
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    date_of_birth: Date.today - 20.years
   )
 end
 

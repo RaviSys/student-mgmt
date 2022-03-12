@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Student</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= link_to blog.student.name_with_email, blog.student  %></td>
+        <td>
+          <%= link_to 'View', blog %>
+          <%= link_to 'Edit', edit_blog_path(blog) %>
+          <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
