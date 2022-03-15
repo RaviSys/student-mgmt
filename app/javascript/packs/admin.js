@@ -23,6 +23,6 @@ import "bootstrap";
 
 import "./plugins/jquery.easing.min"
 import "./plugins/sb-admin-2.min"
-import "./plugins/Chart.min"
-import "./plugins/chart-area-demo"
-import "./plugins/chart-pie-demo"
+// import "./plugins/Chart.min"
+// import "./plugins/chart-area-demo"
+// import "./plugins/chart-pie-demo"

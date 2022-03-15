@@ -1,0 +1,18 @@
+<div class="col-lg-12 mb-5">
+  <div class="card rounded-0 shadow">
+    <div class="card-body">
+      <p>
+        <strong>Name:</strong>
+        <%= @project.name %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @project.description %>
+      </p>
+
+      <%= link_to 'Edit', edit_admin_project_path(@project), class: "btn btn-primary btn-lg" %> 
+      <%= link_to 'Back', admin_projects_path, class: "btn btn-outline-primary btn-lg" %>
+    </div>
+  </div>
+</div>

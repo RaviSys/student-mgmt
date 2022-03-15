@@ -1,4 +1,4 @@
-<%= form_with model: student do |form| %>
+<%= form_with(model: [:admin, student]) do |form| %>
 
   <% if @student.errors.any? %>
     <% @student.errors.full_messages.each do |message| %>

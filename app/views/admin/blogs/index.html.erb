@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Student</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td>
+          <% if blog.student.present? %>
+            <%= link_to blog.student.name_with_email, admin_student_path(blog.student)  %>
+          <% else %>
+            NIL
+          <% end %>
+        </td>
+        <td>
+          <%= link_to 'View', admin_blog_path(blog), class: "btn btn-primary btn-sm" %>
+          <%= link_to 'Edit', edit_admin_blog_path(blog), class: "btn btn-warning btn-sm" %>
+          <%= link_to 'Delete', admin_blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

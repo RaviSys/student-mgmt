@@ -1,4 +1,4 @@
-class BlogsController < ApplicationController
+class Admin::BlogsController < AdminController
   before_action :set_blog, only: %i[show edit update destroy]
 
   def index
@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to blogs_path, notice: 'Student has been created successfully'
+      redirect_to admin_blogs_path, notice: 'Student has been created successfully'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class BlogsController < ApplicationController
 
   def update
     if @blog.update(blog_params)
-      redirect_to blog_path(@blog), notice: 'Student has been updated successfully'
+      redirect_to admin_blog_path(@blog), notice: 'Student has been updated successfully'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class BlogsController < ApplicationController
 
   def destroy
     @blog.destroy
-    redirect_to blogs_path, notice: 'Student has been deleted successfully'
+    redirect_to admin_blogs_path, notice: 'Student has been deleted successfully'
   end
 
   private

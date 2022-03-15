@@ -17,8 +17,8 @@
       <p><strong>Permanent Contact: </strong><%= @student.permanent_contact_number %></p>
       <p><strong>Alternate Contact: </strong><%= @student.alternate_contact_number %></p>
 
-      <%= link_to 'Back', students_path, class: "btn btn-primary" %>
-      <%= link_to 'Edit', edit_student_path(@student), class: "btn btn-secondary" %>
+      <%= link_to 'Back', admin_students_path, class: "btn btn-primary" %>
+      <%= link_to 'Edit', edit_admin_student_path(@student), class: "btn btn-secondary" %>
     </div>
   </div>
 </div>

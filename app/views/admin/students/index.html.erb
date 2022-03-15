@@ -2,7 +2,7 @@
   <p><%= notice %></p>
 
   <h1>Listing Students</h1>
-  <%= link_to 'New Student', new_student_path, class: "btn btn-primary btn-lg" %>
+  <%= link_to 'New Student', new_admin_student_path, class: "btn btn-primary btn-lg" %>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -14,9 +14,9 @@
       <% @students.each do |student| %>
         <tr>
           <td><%= student.name_with_email %></td>
-          <td><%= link_to 'View', student %></td>
-          <td><%= link_to 'Edit', edit_student_path(student) %></td>
-          <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'View', admin_student_path(student) %></td>
+          <td><%= link_to 'Edit', edit_admin_student_path(student) %></td>
+          <td><%= link_to 'Delete', admin_student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>

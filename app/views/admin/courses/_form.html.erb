@@ -1,0 +1,28 @@
+<%= form_with(model: [:admin, course]) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary btn-lg" %>
+    <%= link_to 'Back', admin_courses_path, class: "btn btn-outline-primary btn-lg" %>
+  </div>
+<% end %>
