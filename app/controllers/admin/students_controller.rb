@@ -4,7 +4,7 @@ class Admin::StudentsController < AdminController
   helper_method :formatted_date
 
   def index
-    @students = Student.all
+    @students = Student.all.page(params[:page])
   end
 
   def new

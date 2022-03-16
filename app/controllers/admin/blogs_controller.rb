@@ -2,7 +2,7 @@ class Admin::BlogsController < AdminController
   before_action :set_blog, only: %i[show edit update destroy]
 
   def index
-    @blogs = Blog.includes(:student)
+    @blogs = Blog.includes(:student).page(params[:page])
   end
 
   def new
