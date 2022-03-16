@@ -1,0 +1,40 @@
+<div class="card rounded-0">
+  <div class="card-body">
+    <%= search_form_for q, url: :admin_students do |form| %>
+      <div class="form-group row">
+        <div class="col-lg-3">
+          <%= form.label :first_name %>
+          <%= form.text_field :first_name_cont, class: "form-control" %>
+        </div>
+        <div class="col-lg-3">
+          <%= form.label :last_name %>
+          <%= form.text_field :last_name_cont, class: "form-control" %>
+        </div>
+        <div class="col-lg-3">
+          <%= form.label :email %>
+          <%= form.text_field :email_cont, class: "form-control" %>
+        </div>
+        <div class="col-lg-3">
+          <%= form.label :permanent_contact_number %>
+          <%= form.text_field :permanent_contact_number_cont, class: "form-control" %>
+        </div>
+        <div class="col-lg-3">
+          <%= form.label :alternate_contact_number %>
+          <%= form.text_field :alternate_contact_number_cont, class: "form-control" %>
+        </div>
+        <div class="col-lg-3">
+          <%= form.label :local_address %>
+          <%= form.text_field :local_address_cont, class: "form-control" %>
+        </div>
+        <div class="col-lg-3">
+          <%= form.label :permanent_address %>
+          <%= form.text_field :permanent_address_cont, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= form.submit class: "btn btn-primary" %>
+        <%= link_to "Reset", admin_students_path, class: "btn btn-outline-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

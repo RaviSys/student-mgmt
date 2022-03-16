@@ -2,7 +2,8 @@ class Admin::BlogsController < AdminController
   before_action :set_blog, only: %i[show edit update destroy]
 
   def index
-    @blogs = Blog.includes(:student).page(params[:page])
+    @q = Blog.includes(:student).ransack(params[:q])
+    @blogs = @q.result(distinct: true).page(params[:page])
   end
 
   def new
