@@ -17,17 +17,11 @@
     <%= stylesheet_pack_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="page-top">
-    <div id="wrapper">
-      <%= render 'shared/admin_sidebar' %>
-      <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
-          <%= render 'shared/admin_header' %>
-          <div class="container-fluid">
-            <%= yield %>
-          </div>
-          <%= render "shared/admin_logout_modal" %>
-          <%= render 'shared/admin_footer' %>
+  <body class="bg-gradient-primary">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+          <%= yield %>
         </div>
       </div>
     </div>

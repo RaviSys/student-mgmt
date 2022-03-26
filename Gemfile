@@ -58,3 +58,4 @@ gem 'faker'
 
 gem 'kaminari'
 gem 'ransack'
+gem 'devise'

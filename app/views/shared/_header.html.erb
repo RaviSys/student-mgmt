@@ -9,6 +9,14 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+
+        <% if admin_user_signed_in? %>
+          <%= link_to "Sign Out", destroy_admin_user_session_path, method: :delete, class: "nav-link" %>
+        <% else %>
+          <%= link_to "Sign In", new_admin_user_session_path, class: "nav-link" %>
+        <% end %>
+      </li>
     </ul>
   </div>
 </nav>
