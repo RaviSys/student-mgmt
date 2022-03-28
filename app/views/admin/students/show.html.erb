@@ -1,6 +1,9 @@
 <div class="col-lg-10">
   <div class="card rounded-0 shadow mt-5 mb-5">
     <div class="card-body">
+      <% if @student.profile_image.attached? %>
+        <%= image_tag @student.profile_image, style: "width: 200px;height:300px;" %>
+      <% end %>
       <p><%= notice %></p>
       <h1>Student Details</h1>
 
