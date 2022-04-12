@@ -1,0 +1,14 @@
+<h1>Hello Admin User</h1>
+
+<p>
+  An entry from <%= @object.class.to_s %> has been updated. Below is the details of the object updated:
+</p>
+
+<% @object.attributes.each do |attr_key, attr_value| %>
+  <p><strong><%= attr_key %>:</strong> <%= attr_value %></p>
+<% end %>
+
+<h4>Now the <%= @object.class.to_s %> has total of <%= @object_count %> records.</h4>
+
+<h4>Thanks</h4>
+<h4>Admin Team</h4>

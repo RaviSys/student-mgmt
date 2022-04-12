@@ -65,6 +65,6 @@ class Admin::CoursesController < AdminController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:name, :description)
+      params.require(:course).permit(:name, :description, :content)
     end
 end

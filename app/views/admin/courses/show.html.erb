@@ -11,6 +11,11 @@
         <%= @course.description %>
       </p>
 
+      <p>
+        <strong>Content:</strong>
+        <%= @course.content %>
+      </p>
+
       <%= link_to 'Edit', edit_admin_course_path(@course), class: "btn btn-primary btn-lg" %> 
       <%= link_to 'Back', admin_courses_path, class: "btn btn-outline-primary btn-lg" %>
     </div>
