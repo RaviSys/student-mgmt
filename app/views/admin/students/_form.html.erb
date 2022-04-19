@@ -1,10 +1,6 @@
 <%= form_with(model: [:admin, student]) do |form| %>
 
-  <% if @student.errors.any? %>
-    <% @student.errors.full_messages.each do |message| %>
-      <p><%= message %></p>
-    <% end %>
-  <% end %>
+  <%= render "admin/shared/error", model: student %>
 
   <div class="form-group">
     <%= form.label :first_name %>
